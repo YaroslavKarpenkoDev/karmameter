@@ -1,0 +1,18 @@
+@namespace CalcOfCarma.Shared.Components
+
+<button class="theme-switch @(Theme?.CurrentTheme)" @onclick="ToggleTheme">
+    <div class="switch-viewport">
+        <div class="sky sky-day">
+            <img src="_content/CalcOfCarma.Shared/images/clouds.svg" alt=""/>
+        </div>
+        <div class="sky sky-night">
+            <img src="_content/CalcOfCarma.Shared/images/stars.svg" alt=""/>
+        </div>
+        <div class="celestial-body"></div>
+        
+        <div class="mountains">
+            <img class="mounts-day" src="_content/CalcOfCarma.Shared/images/mounts-day.svg" alt=""/>
+            <img class="mounts-night" src="_content/CalcOfCarma.Shared/images/mounts-night.svg" alt=""/>
+        </div>
+    </div>
+</button>

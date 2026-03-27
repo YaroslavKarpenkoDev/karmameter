@@ -1,0 +1,8 @@
+@using Microsoft.JSInterop
+@namespace CalcOfCarma.Shared.Components
+
+<div class="@(CurrentTheme)-theme" style="min-height: 100vh">
+    <CascadingValue Value="this" IsFixed="false">
+        @ChildContent
+    </CascadingValue>
+</div>

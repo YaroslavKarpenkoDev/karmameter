@@ -1,0 +1,18 @@
+.main-header {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    align-items: center;
+    padding: 10px 20px;
+    width: 100%;
+}
+.header-actions{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    gap: 15px;
+}
+.header-logo span{
+    font-size: 30px;
+    font-weight: bold;
+}

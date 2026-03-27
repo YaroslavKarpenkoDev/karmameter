@@ -1,0 +1,28 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CalcOfCarma", "CalcOfCarma\CalcOfCarma.csproj", "{157035B0-F532-4DF4-9D41-5A897D2C4C6B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CalcOfCarma.Shared", "CalcOfCarma.Shared\CalcOfCarma.Shared.csproj", "{AE487978-7091-4F05-A552-1CB0B2F7142D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CalcOfCarma.Web", "CalcOfCarma.Web\CalcOfCarma.Web.csproj", "{64F6F788-DE2D-489D-AB1A-AF774AD9DAFC}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{157035B0-F532-4DF4-9D41-5A897D2C4C6B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{157035B0-F532-4DF4-9D41-5A897D2C4C6B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{157035B0-F532-4DF4-9D41-5A897D2C4C6B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{157035B0-F532-4DF4-9D41-5A897D2C4C6B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AE487978-7091-4F05-A552-1CB0B2F7142D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AE487978-7091-4F05-A552-1CB0B2F7142D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AE487978-7091-4F05-A552-1CB0B2F7142D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AE487978-7091-4F05-A552-1CB0B2F7142D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{64F6F788-DE2D-489D-AB1A-AF774AD9DAFC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{64F6F788-DE2D-489D-AB1A-AF774AD9DAFC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{64F6F788-DE2D-489D-AB1A-AF774AD9DAFC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{64F6F788-DE2D-489D-AB1A-AF774AD9DAFC}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal

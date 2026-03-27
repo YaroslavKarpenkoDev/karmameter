@@ -1,0 +1,138 @@
+.theme-switch {
+    --duration: 0.8s;
+    
+    padding: 0;
+    border: none;
+    background: none;
+    cursor: pointer;
+    width: 66px;
+    height: 30px;
+}
+.celestial-body {
+    position: absolute;
+    height: 45%;
+    aspect-ratio: 1 / 1;
+    
+    top: 40%;
+    left: 15%;
+    transform: translate(-50%, -50%);
+    
+    border-radius: 50%;
+    background: radial-gradient(circle, #f6f061 0%, #f6d361 100%);
+    box-shadow: 0 0 10px rgba(246, 240, 97, 0.4);
+    z-index: 3;
+    
+    transition: box-shadow var(--duration) ease-in-out;
+    animation: moon-to-sun var(--duration) linear forwards;
+}
+.celestial-body::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; width: 100%; height: 100%;
+    border-radius: 50%;
+    background: radial-gradient(circle, #A5C5EB 0%, #7499C4 100%);
+    opacity: 0;
+    transition: opacity var(--duration) ease-in-out;
+}
+.theme-switch.dark .celestial-body{
+    left: 85%;
+    box-shadow: inset 0 0 10px rgba(165, 197, 235, 0.4);
+    animation: sun-to-moon var(--duration) linear forwards;
+}
+.theme-switch.dark .celestial-body::before {
+    opacity: 1;
+}
+@keyframes sun-to-moon {
+    0%   { left: 15%;   top: 40%;   transform: translate(-50%, -50%); }
+    12.5%{ left: 23.75%;top: 36.5%; transform: translate(-50%, -50%); }
+    25%  { left: 32.5%;  top: 33.5%; transform: translate(-50%, -50%); }
+    37.5%{ left: 41.25%;top: 31%;   transform: translate(-50%, -50%); }
+    50%  { left: 50%;    top: 30%;   transform: translate(-50%, -50%); } 
+    62.5%{ left: 58.75%;top: 31%;   transform: translate(-50%, -50%); }
+    75%  { left: 67.5%;  top: 33.5%; transform: translate(-50%, -50%); }
+    87.5%{ left: 76.25%;top: 36.5%; transform: translate(-50%, -50%); }
+    100% { left: 85%;    top: 40%;   transform: translate(-50%, -50%); }
+}
+
+@keyframes moon-to-sun {
+    0%   { left: 85%;    top: 40%;   transform: translate(-50%, -50%); }
+    12.5%{ left: 76.25%;top: 36.5%; transform: translate(-50%, -50%); }
+    25%  { left: 67.5%;  top: 33.5%; transform: translate(-50%, -50%); }
+    37.5%{ left: 58.75%;top: 31%;   transform: translate(-50%, -50%); }
+    50%  { left: 50%;    top: 30%;   transform: translate(-50%, -50%); }
+    62.5%{ left: 41.25%;top: 31%;   transform: translate(-50%, -50%); }
+    75%  { left: 32.5%;  top: 33.5%; transform: translate(-50%, -50%); }
+    87.5%{ left: 23.75%;top: 36.5%; transform: translate(-50%, -50%); }
+    100% { left: 15%;    top: 40%;   transform: translate(-50%, -50%); }
+}
+.switch-viewport {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    border-radius: 36px;
+    overflow: hidden;
+    box-shadow: inset 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.sky {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    transition: opacity var(--duration) cubic-bezier(0.4, 0, 0.2, 1);
+    
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: stretch;
+}
+
+.sky-day {
+    background: linear-gradient(180deg, #ABFAFF 0%, #D5FFAB 100%);
+    z-index: 1;
+}
+
+.sky-night {
+    background: linear-gradient(180deg, #364BBA 0%, #A979D9 100%);
+    z-index: 2;
+    opacity: 0;
+}
+
+.theme-switch.dark .sky-night {
+    opacity: 1;
+}
+.sky img {
+    width: 100%;
+    height: 50%;
+    object-fit: cover;
+    object-position: top;
+    pointer-events: none; 
+}
+.mountains{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 4;
+    pointer-events: none;
+}
+.mountains img {
+    position: absolute;
+    bottom: -55%;
+    left: -17%;
+    width: 140%;
+    height: auto;
+    object-fit: cover;
+    transition: opacity var(--duration) ease-in-out;
+}
+.mounts-day{
+    opacity: 1;
+}
+.mounts-night {
+    opacity: 0;
+}
+.theme-switch.dark .mounts-night {
+    opacity: 1;
+}
