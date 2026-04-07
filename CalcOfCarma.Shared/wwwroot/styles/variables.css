@@ -1,14 +1,14 @@
 :root {
-   
     --color-bg: #f8f9fa;           
     --color-card: #ffffff;         
     --color-text: #212529;         
-    --color-text-muted: #6c757d;   
+    --color-text-muted: #6c757d;
     
     --color-good: #28a745;         
     --color-bad: #dc3545;          
     --color-neutral: #ffc107;      
     
+    --glass-bg: rgba(255, 255, 255, 0.1);
     --bg-img: url('images/main-background.png');
     --bg-img-dark: url('images/main-background-night.png');
     --font-main: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -31,16 +31,20 @@
 .light-theme {
     --color-bg: #f8f9fa;
     --color-card: #ffffff;
-    --color-text: #212529;
+    --color-text: #4E4E4E;
+    --color-text-rgb: rgb(78, 78, 78);
     --color-good: #28a745;
+    --glass-bg: rgba(255, 255, 255, 0.1);
     --shadow-soft: 0 4px 6px rgba(0, 0, 0, 0.1);
     --theme-opacity-for-bf: 0;
 }
 .dark-theme {
     --color-bg: #121212;
     --color-card: #1e1e1e;
-    --color-text: #e0e0e0;
+    --color-text: #D5CDBD;
+    --color-text-rgb: rgb(213, 205, 189);
     --color-good: #4ade80;
+    --glass-bg: rgba(0, 0, 0, 0.1);
     --shadow-soft: 0 4px 20px rgba(0, 0, 0, 0.5);
     --theme-opacity-for-bf: 1;
 }

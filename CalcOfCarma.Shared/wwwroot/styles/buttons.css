@@ -1,0 +1,13 @@
+.action-btn{
+    appearance: none;
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-weight: 700;
+    font-size: 16px;
+    color: var(--color-text);
+    text-decoration: underline;
+    text-decoration-thickness: 2px;
+    text-underline-offset: 6px;
+    transition: all 0.3s ease;
+}

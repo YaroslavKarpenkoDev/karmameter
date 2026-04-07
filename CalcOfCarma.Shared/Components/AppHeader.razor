@@ -1,15 +1,19 @@
 @namespace  CalcOfCarma.Shared.Components
 <header class="main-header">
+    <div class="left-block">
+        <ThemeToggle/>
+    </div>
+
     <div class="header-logo">
         <span class="logo-text">Karma meter</span>
+        <span class="sublogo">calculate your carma</span>
     </div>
     <div class="header-actions">
         <button class="action-btn lang-btn" @onclick="ToggleLanguage">
             @CurrentLanguage
         </button>
-        
-        <ThemeToggle/>
-        
+
+
         <button class="action-btn auth-toggle">
             Увійти
         </button>
