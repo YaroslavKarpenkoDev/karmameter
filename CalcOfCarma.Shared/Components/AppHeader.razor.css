@@ -50,6 +50,13 @@
 .header-actions{
     grid-column: 3;
     display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 15px;
+    grid-template-columns: 40px 70px;
+    justify-content: end;
+    gap: 5px;
+}
+.lang-btn{
+    grid-column: 1;
+}
+.auth-btn{
+    grid-column: 2;
 }
