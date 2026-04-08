@@ -1,4 +1,6 @@
 @namespace  CalcOfCarma.Shared.Components
+@using CalcOfCarma.Shared.Services
+@inject LanguageService Lang
 <header class="main-header">
     <div class="left-block">
         <ThemeToggle/>
@@ -10,12 +12,12 @@
     </div>
     <div class="header-actions">
         <button class="action-btn lang-btn" @onclick="ToggleLanguage">
-            @CurrentLanguage
+            @Lang.CurrentLanguage.ToUpper()
         </button>
 
 
         <button class="action-btn auth-toggle">
-            Увійти
+            @Lang["header_btn_login"]
         </button>
     </div>
 </header>

@@ -1,10 +1,18 @@
+using CalcOfCarma.Shared.Services;
 using CalcOfCarma.Web.Components;
+using Microsoft.AspNetCore.Components;
 
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddRazorComponents()
     .AddInteractiveServerComponents();
+builder.Services.AddScoped(sp =>
+{
+    var navigationManager = sp.GetRequiredService<NavigationManager>();
+    return new HttpClient{BaseAddress = new Uri(navigationManager.BaseUri)};
+});
+builder.Services.AddScoped<LanguageService>();
 
 var app = builder.Build();
 

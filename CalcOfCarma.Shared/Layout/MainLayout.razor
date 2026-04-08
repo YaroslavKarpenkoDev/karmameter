@@ -1,9 +1,18 @@
+@using CalcOfCarma.Shared.Services
 @inherits LayoutComponentBase;
 @namespace CalcOfCarma.Shared.Layout
+@inject LanguageService Lang
 
 <div class="page">
-    <AppHeader/>
-    <main>
-        @Body
-    </main>
+    @if (_isLoaded)
+    {
+        <AppHeader />
+        <main>@Body</main>
+    }
+    else
+    {
+        <div class="loading-screen">
+            <span>Завантаження...</span>
+        </div>
+    }
 </div>

@@ -6,10 +6,18 @@ public partial class AppHeader : ComponentBase
 {
     public string CurrentLanguage { get; set; } = "UA";
 
-    
-
-    private void ToggleLanguage()
+    protected override void OnInitialized()
     {
-        CurrentLanguage = CurrentLanguage == "UA"  ? "EN" : "UA";
+        Lang.OnLanguageChanged += StateHasChanged;
+    }
+    private async Task ToggleLanguage()
+    {
+        var nextLang = Lang.CurrentLanguage == "uk"  ? "en" : "uk";
+        await Lang.SetLanguage(nextLang);
+    }
+
+    public void Dispose()
+    {
+        Lang.OnLanguageChanged -= StateHasChanged;
     }
 }
