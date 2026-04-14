@@ -1,0 +1,29 @@
+.page-wrapper {
+    display: grid;
+    place-items: center;
+    margin: 0 40px 40px;
+    height: 100%;
+    width: 100%;
+}
+.main-frame{
+    
+    width: 100%;
+    height: 100%;
+    border-radius: var(--radius-main);
+    background-color: var(--glass-bg);
+    backdrop-filter: var(--blur-value);
+    padding: 20px;
+    -webkit-backdrop-filter: var(--blur-value);
+    border: var(--border-width) solid var(--border-color);
+}
+.corner-border{
+    height: 100%;
+    width: 100%;
+    border: var(--border-width) solid var(--border-color);
+    border-radius: var(--radius-main);
+    -webkit-mask-image:
+            linear-gradient(to right, black 20px, transparent 20px, transparent calc(100% - 20px), black calc(100% - 20px)),
+            linear-gradient(to bottom, black 20px, transparent 20px, transparent calc(100% - 20px), black calc(100% - 20px));
+    -webkit-mask-composite: source-in;
+    mask-composite: intersect;
+}

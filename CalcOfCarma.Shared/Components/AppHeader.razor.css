@@ -8,8 +8,9 @@
     padding: 10px 20px;
     width: 100%;
     background-color: var(--glass-bg);
-    backdrop-filter: blur(10px);
-    -webkit-backdrop-filter: blur(10px);
+    border-bottom: var(--border-width) solid var(--border-color);
+    backdrop-filter: var(--blur-value);
+    -webkit-backdrop-filter: var(--blur-value);
     transition: all var(--duration) ease;
 }
 

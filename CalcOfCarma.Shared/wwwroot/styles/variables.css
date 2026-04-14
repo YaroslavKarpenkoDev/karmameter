@@ -1,7 +1,10 @@
 :root {
     --color-bg: #f8f9fa;           
     --color-card: #ffffff;         
-    --color-text: #212529;         
+    --color-text: #212529;        
+    --border-color: rgb(78, 78, 78);
+    --border-color-alfa: 0.7;
+    --border-width: 0.1rem;
     --color-text-muted: #6c757d;
     
     --color-good: #28a745;         
@@ -26,12 +29,14 @@
     --duration: 0.8s;
     
     --theme-opacity-for-bf: 1;
+    --blur-value: blur(10px);
     
 }
 .light-theme {
     --color-bg: #f8f9fa;
     --color-card: #ffffff;
     --color-text: #4E4E4E;
+    --border-color: rgb(78, 78, 78, var(--border-color-alfa));
     --color-text-rgb: rgb(78, 78, 78);
     --color-good: #28a745;
     --glass-bg: rgba(255, 255, 255, 0.1);
@@ -43,6 +48,7 @@
     --color-card: #1e1e1e;
     --color-text: #D5CDBD;
     --color-text-rgb: rgb(213, 205, 189);
+    --border-color: rgb(213, 205, 189, var(--border-color-alfa));
     --color-good: #4ade80;
     --glass-bg: rgba(0, 0, 0, 0.1);
     --shadow-soft: 0 4px 20px rgba(0, 0, 0, 0.5);
