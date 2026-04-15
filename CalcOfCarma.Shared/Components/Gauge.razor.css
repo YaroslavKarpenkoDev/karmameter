@@ -1,0 +1,7 @@
+.gauge-body {
+    display: flex;
+    border-top-radius: 50%;
+    background: red;
+    height: 200px;
+    width: 200px;
+}
