@@ -1,6 +1,20 @@
-<div @attributes="AdditionalAttributes">
-    <div class="gauge-body">
-    
+<div class="gauge-container">
+    <div class="gauge-body"></div>
+    <div class="gauge-ticks">
+        @for (int i = -90; i <= 90; i += 10)
+        {
+            <div class="line @(i % 45 == 0 ? "major" : "")" 
+                 style="--angle: @(i)deg"></div>
+        }
+        <div class="tick" style="--angle: -80deg"><span>-100</span></div>
+        <div class="tick" style="--angle: -45deg"><span>-50</span></div>
+        <div class="tick" style="--angle: 0deg"><span>0</span></div>
+        <div class="tick" style="--angle: 45deg"><span>50</span></div>
+        <div class="tick" style="--angle: 80deg"><span>100</span></div>
+        <div class="needle" style="--needle-angle: @CurrentAngle deg">
+            <div class="needle-body"></div>
+            <div class="needle-center"></div>
+        </div>
     </div>
 </div>
 

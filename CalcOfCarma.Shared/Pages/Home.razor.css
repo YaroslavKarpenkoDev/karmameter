@@ -21,19 +21,30 @@
     border: var(--border-width) solid var(--border-color);
 }
 
-.corner-border{
-    display: flex;
-    justify-content: center;
-    align-items: center;
+.main-frame::before {
+    content: "";
+    position: absolute;
     
-    height: 100%;
-    width: 100%;
+    top: 20px;
+    left: 20px;
+    right: 20px;
+    bottom: 20px;
+
     border: var(--border-width) solid var(--border-color);
     border-radius: 11px;
-    padding: 20px;
+    pointer-events: none;
+
     -webkit-mask-image:
             linear-gradient(to right, black var(--corners-leng), transparent var(--corners-leng), transparent calc(100% - var(--corners-leng)), black calc(100% - var(--corners-leng))),
             linear-gradient(to bottom, black var(--corners-leng), transparent var(--corners-leng), transparent calc(100% - var(--corners-leng)), black calc(100% - var(--corners-leng)));
     -webkit-mask-composite: source-in;
     mask-composite: intersect;
+}
+
+.corner-border {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 100%;
 }

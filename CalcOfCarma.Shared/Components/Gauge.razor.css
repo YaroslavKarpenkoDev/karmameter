@@ -1,7 +1,60 @@
-.gauge-body {
-    display: flex;
-    border-top-radius: 50%;
-    background: red;
+.gauge-container {
+    position: relative;
+    width: 400px;
     height: 200px;
-    width: 200px;
+    margin: 50px auto;
+}
+.gauge-body {
+    position: relative;
+    display: flex;
+    border-radius: 200px 200px 0 0;
+    height: 200px;
+    width: 400px;
+    border: 2px solid var(--border-color);
+}
+.gauge-ticks {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    width: 0;
+    height: 0;
+}
+.tick{
+    position: absolute;
+    transform: rotate(var(--angle)) translateY(-185px);
+    
+    width: 40px;
+    margin-left: -20px;
+    text-align: center;
+    font-family:'Poppins', sans-serif;
+    font-weight: bold;
+    color: var(--color-text);
+}
+.tick:first-child{
+    transform: rotate(var(--angle)) translateY(-175px); !important;
+}
+.tick:last-child{
+    transform: rotate(var(--angle)) translateY(-175px); !important;
+}
+.tick span {
+    display: block;
+    transform: rotate(calc(var(--angle) * -1));
+    font-size: 14px;
+    opacity: 0.7;
+}
+.line{
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    width: 2px;
+    height: 10px;
+    background-color: var(--color-text);
+    transform: translateX(-50%) rotate(var(--angle)) translateY(-190px);
+    transform-origin: bottom center;
+}
+.line.major{
+    width: 3px;
+    height: 15px;
+    background-color: var(--color-text);
+    transform: translateX(-50%) rotate(var(--angle)) translateY(-185px);
 }
